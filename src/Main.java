@@ -5,25 +5,30 @@ number of '1' bits it has (also known as the Hamming weight)
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(new Solution().hammingWeight(00000000000000000000000010000000));
+        System.out.println(new Solution().hammingWeight(00000000000000000000000000001011));
 
-    }
-
-
-    // other option, use remainder modulus and /10 each time using while loop and increment count
-    public static class Solution {
-        // you need to treat n as an unsigned value
-        public int hammingWeight(int n) {
-            int count = 0;
-            while (n != 0) {
-                int last_bit = n & 1; //Stores the value of the last bit of the number n i.e.(1 or 0)
-                count += last_bit; // adds 0 if last bit is 0 and adds 1 if last bit is 1
-                n = n >>> 1;  //Dropping the last bit of the binary number n
-            }
-            return count;
-        }
     }
 }
+
+
+// OF CPURSE IT CANT BE THIS EASY
+//class Solution {
+//    public int hammingWeight(int n) {
+//        String s = Integer.toString(n);
+//        int count = 0;
+//        for (int i = 0; i < s.length(); i++) {
+//            if (s.charAt(i) == '1') {
+//                count++;
+//            }
+//        }
+//        return count;
+//    }
+//}
+
+
+
+
+
 
 
 
